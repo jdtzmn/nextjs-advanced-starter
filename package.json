@@ -13,7 +13,7 @@
     "test:cypress": "cypress run",
     "cypress:open": "cypress open",
     "ci": "concurrently --kill-others-on-fail \"npm:test:unit\" \"npm:test:e2e\"",
-    "lint": "eslint --ext .js,.ts ."
+    "lint": "eslint --ext .js,.ts,.tsx ."
   },
   "husky": {
     "hooks": {
