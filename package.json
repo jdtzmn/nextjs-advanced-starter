@@ -1,0 +1,100 @@
+{
+  "name": "nextjs-advanced-starter",
+  "version": "1.0.0",
+  "description": "a next.js starter setup with redux, typescript, fastify, styled-components, with built-in unit, end-to-end testing, and linting.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "next build && tsc --project tsconfig.server.json",
+    "start": "cross-env NODE_ENV=production node dist/index.js",
+    "test": "jest --watch",
+    "test:unit": "jest",
+    "test:e2e": "start-server-and-test start 3000 test:cypress",
+    "test:cypress": "cypress run",
+    "cypress:open": "cypress open",
+    "ci": "concurrently --kill-others-on-fail \"npm:test:unit\" \"npm:test:e2e\"",
+    "lint": "eslint --ext .js,.ts ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix",
+      "git add",
+      "jest --findRelatedTests"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdtzmn/nextjs-advanced-starter.git"
+  },
+  "keywords": [
+    "starter",
+    "redux",
+    "typescript",
+    "next.js",
+    "jest",
+    "fastify",
+    "unit",
+    "end-to-end",
+    "linting"
+  ],
+  "author": "jdtzmn <jdtzmn@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/jdtzmn/nextjs-advanced-starter/issues"
+  },
+  "homepage": "https://github.com/jdtzmn/nextjs-advanced-starter#readme",
+  "dependencies": {
+    "@zeit/next-typescript": "^1.1.1",
+    "fastify": "^2.0.0",
+    "jest": "^24.1.0",
+    "next": "^8.0.3",
+    "next-routes": "^1.4.2",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-redux": "^6.0.1",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^4.1.3"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.9.0",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/jest": "^24.0.9",
+    "@types/next": "^8.0.1",
+    "@types/react": "^16.8.6",
+    "@types/styled-components": "^4.1.11",
+    "@typescript-eslint/eslint-plugin": "^1.4.2",
+    "@typescript-eslint/parser": "^1.4.2",
+    "babel-plugin-styled-components": "^1.10.0",
+    "concurrently": "^4.1.0",
+    "cross-env": "^5.2.0",
+    "cypress": "^3.1.5",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.10.0",
+    "enzyme-to-json": "^3.3.5",
+    "eslint": "^5.15.0",
+    "eslint-config-standard-with-typescript": "^7.0.0",
+    "eslint-plugin-cypress": "^2.2.1",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.3.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-standard": "^4.0.0",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5",
+    "nodemon": "^1.18.10",
+    "start-server-and-test": "^1.7.11",
+    "ts-jest": "^24.0.0",
+    "ts-node": "^8.0.2",
+    "tsconfig-paths-jest": "^0.0.1",
+    "typescript": "^3.3.3333"
+  }
+}

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index should render correctly 1`] = `
+<div>
+  <styled.h1>
+    nextjs-advanced-starter
+  </styled.h1>
+  <count>
+    0
+  </count>
+  <incrementButton
+    onClick={[MockFunction]}
+  >
+    Click To Increment
+  </incrementButton>
+</div>
+`;
