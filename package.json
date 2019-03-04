@@ -43,7 +43,7 @@
     "linting"
   ],
   "author": "jdtzmn <jdtzmn@gmail.com>",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jdtzmn/nextjs-advanced-starter/issues"
   },
