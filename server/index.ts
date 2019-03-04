@@ -1,5 +1,5 @@
-import * as Fastify from 'fastify'
-import * as Next from 'next'
+import Fastify from 'fastify'
+import Next from 'next'
 import routes from './routes'
 
 const port = parseInt(process.env.PORT, 10) || 3000
